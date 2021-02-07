@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Функции – это значения. Они могут быть присвоены, скопированы или объявлены в другом месте кода.
+      // Если функция объявлена как отдельная инструкция в основном потоке кода, то это Function Declaration.
+      // Если функция была создана как часть выражения, то считается, что эта функция объявлена при помощи Function Expression.
+      // Function Declaration обрабатываются перед выполнением блока кода. Они видны во всём блоке.
+      // Функции, объявленные при помощи Function Expression, создаются, только когда поток выполнения достигает их.
+      // let age = prompt("Сколько Вам лет?", 18);
+      //
+      // let welcome;
+      //
+      // if (age < 18) {
+      //
+      //   welcome = function() {
+      //     alert("Привет!");
+      //   };
+      //
+      // } else {
+      //
+      //   welcome = function() {
+      //     alert("Здравствуйте!");
+      //   };
+      //
+      // }
+      //
+      // welcome(); // теперь всё в порядке
+
+      // function ask(question, yes, no) {
+      //   if (confirm(question)) yes();
+      //   else no();
+      // }
+      // //
+      // ask(
+      //   'Вы согласны?',
+      //   function () {
+      //     alert('Вы согласились.');
+      //   },
+      //   function () {
+      //     alert('Вы отменили выполнение.');
+      //   }
+      // );
+      // Теперь стрелочной функцией:
+
+      function ask(question, yes, no) {
+        if (confirm(question)) yes();
+        else no();
+      }
+
+      ask(
+        'Вы согласны?',
+        () => alert('Вы согласились.'),
+        () => alert('Вы отменили выполнение.')
+      );
+    </script>
+  </body>
+</html>

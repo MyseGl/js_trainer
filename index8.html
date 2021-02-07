@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // alert(null || 2 || undefined); //2 - первое истиное
+      // alert(alert(1) || 2 || alert(3)); //1. 2
+      // alert(1 && null && 2); // null - первое ложное
+      // alert(alert(1) && alert(2));//1, undefinded - т.к. после alert(1) ничего не вернётся
+      // alert(null || (2 && 3) || 4); // 3
+
+      // let numb = prompt('Insert an age', 14);
+      // if (numb >= 14 && numb <= 90) {
+      //   alert('normal age!');
+      // } else {
+      //   alert('u 2 young or old -_-');
+      // }
+
+      // let numb = prompt('Insert an age', 14);
+      // if (!(numb >= 14 && numb <= 90)) {
+      //   alert('normal age!');
+      // } else {
+      //   alert('u 2 young or old -_-');
+      // }
+      // let numb = prompt('Insert an age', 14);
+      // if (numb < 14 || numb > 90) {
+      //   alert('normal age!');
+      // } else {
+      //   alert('u 2 young or old -_-');
+      // }
+
+      // if (-1 || 0) alert( 'first' ); // yes
+      // if (-1 && 0) alert( 'second' ); // no
+      // if (null || -1 && 1) alert( 'third' ); // yes
+
+      let userName = prompt('Кто там?', '');
+
+      if (userName == 'Админ') {
+        let pass = prompt('Пароль?', '');
+
+        if (pass == 'Я главный') {
+          alert('Здравствуйте!');
+        } else if (pass == '' || pass == null) {
+          alert('Отменено');
+        } else {
+          alert('Неверный пароль');
+        }
+      } else if (userName == '' || userName == null) {
+        alert('Отменено');
+      } else {
+        alert('Я вас не знаю');
+      }
+    </script>
+  </body>
+</html>
